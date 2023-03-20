@@ -1,0 +1,79 @@
+.app {
+    background-color: #f7f7fe;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+
+    .top-bg {
+        position: absolute;
+        width: 472px;
+        height: 760px;
+        object-fit: cover;
+        right: -200px;
+        z-index: 0;
+    }
+
+    .container {
+        padding: 64px 24px;
+
+
+        &__header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 42px;
+            position: relative;
+            z-index: 2;
+
+            .header {
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 39px;
+                text-align: center;
+                color: #6E728E;
+            }
+
+            .toggle__container {
+                display: flex;
+                align-items: center;
+                gap: 24px;
+
+                span {
+                    font-weight: 700;
+                    font-size: 15px;
+                    line-height: 28px;
+                    text-align: right;
+                    color: #6E728E;
+                    mix-blend-mode: normal;
+                    opacity: 0.5;
+                }
+
+                .toggle__wrapper {
+                    background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+                    border-radius: 16px;
+                    width: 56px;
+                    height: 32px;
+                    display: flex;
+                    align-items: center;
+                    padding: 5px;
+                    cursor: pointer;
+
+                    .toggle__cicle {
+                        background: #FFFFFF;
+                        height: 24px;
+                        width: 24px;
+                        border-radius: 50%;
+                        transform: translateX(100%);
+                        transition: .5s all ease-in-out;
+
+                        &.anually {
+                            transform: translateX(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
