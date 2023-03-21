@@ -2,7 +2,7 @@
     background-color: #f7f7fe;
     height: 100vh;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
 
 
     .top-bg {
@@ -16,6 +16,10 @@
 
     .container {
         padding: 64px 24px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 80px;
 
 
         &__header {
@@ -74,6 +78,14 @@
                     }
                 }
             }
+        }
+
+        &__features{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            flex-direction: column;
         }
     }
 }

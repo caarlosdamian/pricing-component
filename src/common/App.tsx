@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { bgTop } from "../assets";
+import { Card } from "../components/card/Card";
 import { SubContext } from "../context/subContext";
+import { SubInfo } from "../utils/data";
 import "./App.scss";
 
 export const App = () => {
@@ -19,7 +21,11 @@ export const App = () => {
       <span>Monthly</span>
      </div>
     </section>
-    <section id="features" className="container__features"></section>
+    <section id="features" className="container__features">
+     {SubInfo.map((item) => (
+      <Card key={item.id}  item={item}/>
+     ))}
+    </section>
    </div>
   </main>
  );

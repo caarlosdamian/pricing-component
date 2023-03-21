@@ -1,19 +1,5 @@
-import {
- createContext,
- Dispatch,
- SetStateAction,
- useState,
- ReactNode,
-} from "react";
-
-interface AppContextInterface {
- subType: boolean;
- setSubType: Dispatch<SetStateAction<boolean>>;
-}
-
-interface ProviderProps {
- children: React.ReactNode;
-}
+import { createContext, useState } from "react";
+import { AppContextInterface, ProviderProps } from "../common/types";
 
 export const defaultValues: AppContextInterface = {
  subType: false,
