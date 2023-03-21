@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { bgTop } from "../assets";
+import { bgTop,bgBottom } from "../assets";
 import { Card } from "../components/card/Card";
 import { SubContext } from "../context/subContext";
 import { SubInfo } from "../utils/data";
@@ -10,6 +10,7 @@ export const App = () => {
  return (
   <main className="app">
    <img src={bgTop} alt="bgTop" className="top-bg" />
+   <img src={bgBottom} alt="bgBottom" className="bottom-bg" />
    <div className="container">
     <section id="header" className="container__header">
      <h1 className="header">Our Pricing</h1>

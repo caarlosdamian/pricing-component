@@ -1,3 +1,5 @@
+@import './tokens.scss';
+
 .app {
     background-color: #f7f7fe;
     height: 100vh;
@@ -5,6 +7,9 @@
     overflow-x: hidden;
 
 
+    @include for-size('tablet-landscape-up') {
+        overflow: hidden;
+    }
     .top-bg {
         position: absolute;
         width: 472px;
@@ -12,6 +17,21 @@
         object-fit: cover;
         right: -200px;
         z-index: 0;
+    }
+
+    .bottom-bg {
+        position: absolute;
+        // width: 472px;
+        // height: 760px;
+        object-fit: cover;
+        left: 0;
+        bottom: 0;
+        z-index: 10;
+        display: none;
+
+        @include for-size('tablet-landscape-up') {
+            display: block;
+        }
     }
 
     .container {
@@ -80,12 +100,17 @@
             }
         }
 
-        &__features{
+        &__features {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 32px;
             flex-direction: column;
+
+            @include for-size('tablet-landscape-up') {
+                flex-direction: row;
+                gap: 0;
+            }
         }
     }
 }
